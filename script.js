@@ -14,11 +14,9 @@ function setup() {
     for (var y = 0; y < ySide; y++) {
         matrix[y] = [];
         for (var x = 0; x < xSide; x++) {
-            matrix[y][x] = random([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,1,1,1,1, 2, 2, 2, 3, 3, 4, 5,5,5]);
+            matrix[y][x] = random([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5]);
         }
     }
-
-
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[y].length; x++) {
             if (matrix[y][x] == 1) {
@@ -43,8 +41,6 @@ function setup() {
             }
         }
     }
-
-
 }
 function draw() {
 
@@ -70,8 +66,6 @@ function draw() {
                 fill("black");
             }
             rect(x * side, y * side, side, side);
-
-
         }
     }
     for (var i in grassArr) {
@@ -82,7 +76,6 @@ function draw() {
         xotakerArr[i].eat();
         xotakerArr[i].mul();
         xotakerArr[i].die();
-
     }
     for (var i in gishatichArr) {
         gishatichArr[i].move();
